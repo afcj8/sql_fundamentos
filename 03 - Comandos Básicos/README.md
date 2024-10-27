@@ -76,3 +76,18 @@ VALUES (dado1, dado2, dado3),
 ```
 
 No exemplo, cada conjunto de valores representa uma nova linha a ser inserida na tabela, correspondendo às colunas especificadas.
+
+## 3.3. Comando SELECT
+
+O comando `SELECT` permite realizar consultas para recuperar dados de uma tabela. Para selecionar todos os campos de uma tabela, utiliza-se o asterisco `*`, que representa todas as colunas:
+
+```
+SELECT * FROM nome_tabela;
+```
+Para consultar colunas específicas, basta listar os nomes das colunas desejadas:
+
+```
+SELECT coluna1, coluna2 FROM nome_tabela;
+```
+
+Nesse caso, apenas os dados de `coluna1` e `coluna2` serão retornados.
