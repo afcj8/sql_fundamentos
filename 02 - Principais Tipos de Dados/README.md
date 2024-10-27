@@ -36,3 +36,9 @@ O PostgreSQL oferece uma ampla variedade de tipos de dados para armazenar inform
 | timestamp   | 8 bytes  | Armazena data e hora combinadas (sem fuso horário).                |
 | timestamptz | 8 bytes  | Armazena data e hora com fuso horário.                             |
 | interval    | 12 bytes | Representa um intervalo de tempo (diferença entre datas ou horas). |
+
+## 2.5. Booleano
+
+| Tipo    | Tamanho | Descrição                               |
+| ------- | ------- | --------------------------------------- |
+| boolean | 1 byte  | Representa valores TRUE, FALSE ou NULL. |
