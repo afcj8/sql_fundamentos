@@ -9,3 +9,12 @@ O PostgreSQL oferece uma ampla variedade de tipos de dados para armazenar inform
 | smallint | 2 bytes | Armazena inteiros pequenos (-32.768 a 32.767).                                      |
 | integer  | 4 bytes | Armazena inteiros comuns (-2.147.483.648 a 2.147.483.647).                          |
 | bigint   | 8 bytes | Armazena inteiros grandes (-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807). |
+
+## 2.2. Números Fracionários
+
+| Tipo     | Tamanho | Descrição                                                                      |
+| -------- | ------- | ------------------------------------------------------------------------------ |
+| real | 4 bytes | Número com ponto flutuante de precisão simples.                                    |
+| double precision | 8 bytes | Número com ponto flutuante de precisão dupla.                          |
+| numeric | Variável | Armazena números com precisão exata e escala definida (ideal para valores monetários). |
+| decimal | Variável | Armazena números com precisão exata e escala definida (ideal para valores monetários). |
