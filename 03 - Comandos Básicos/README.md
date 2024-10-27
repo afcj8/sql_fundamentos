@@ -63,3 +63,16 @@ No contexto de bancos de dados, constraints (ou restrições) são regras aplica
 6. **DEFAULT:** Define um valor padrão para a coluna, utilizado automaticamente quando nenhum valor específico é fornecido na inserção de um novo registro.
 
 Essas constraints são essenciais para manter a precisão e a integridade dos dados no banco de dados e são definidas durante a criação da tabela, ou adicionadas posteriormente com comandos como `ALTER TABLE`.
+
+## 3.2. Comando INSERT INTO
+
+O comando `INSERT INTO` permite adicionar novas linhas, ou seja, inserir dados em uma tabela existente. Abaixo, um exemplo de uso:
+
+```
+INSERT INTO nome_tabela (coluna1, coluna2, coluna3) 
+VALUES (dado1, dado2, dado3), 
+       (dado4, dado5, dado6), 
+       (dado7, dado8, dado9);
+```
+
+No exemplo, cada conjunto de valores representa uma nova linha a ser inserida na tabela, correspondendo às colunas especificadas.
