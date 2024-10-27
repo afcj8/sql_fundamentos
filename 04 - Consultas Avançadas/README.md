@@ -28,3 +28,22 @@ A cláusula `LIMIT` restringe o número de registros retornados pela consulta. I
 SELECT * FROM nome_tabela
 LIMIT 10;
 ```
+
+## 4.4. Funções de Agregação
+
+As funções de agregação permitem realizar cálculos sobre um conjunto de dados. As principais funções incluem:
+
+- **COUNT:** conta o número de registros.
+- **SUM:** calcula a soma de valores.
+- **AVG:** calcula a média de valores.
+- **MAX:** retorna o maior valor.
+- **MIN:** retorna o menor valor.
+
+Exemplo de uso:
+
+```
+SELECT COUNT(*) AS total_registros,
+       SUM(coluna_numerica) AS soma_total,
+       AVG(coluna_numerica) AS media_valores
+FROM nome_tabela;
+```
