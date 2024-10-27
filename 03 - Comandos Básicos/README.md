@@ -76,3 +76,7 @@ VALUES (dado1, dado2, dado3),
 ```
 
 No exemplo, cada conjunto de valores representa uma nova linha a ser inserida na tabela, correspondendo às colunas especificadas.
+
+## 3.3. Comando SELECT
+
+O comando `SELECT` permite realizar consultas para recuperar dados de uma tabela. 
