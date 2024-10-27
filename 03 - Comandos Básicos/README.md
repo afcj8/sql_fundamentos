@@ -102,3 +102,7 @@ SET nome_coluna1 = novo_dado;
 ```
 
 Esse comando altera o valor de `nome_coluna1` para `novo_dado` em todos os registros da tabela. Para atualizar dados em registros específicos, é recomendável usar uma cláusula `WHERE`.
+
+## 3.5. Comando DELETE
+
+O comando `DELETE` remove linhas de uma tabela.
