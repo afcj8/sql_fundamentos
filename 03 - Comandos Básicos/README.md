@@ -58,3 +58,5 @@ No contexto de bancos de dados, constraints (ou restrições) são regras aplica
 
 4. **NOT NULL:** Restringe uma coluna para que não possa conter valores nulos, obrigando a inserção de um valor válido em todos os registros.
 
+5. **CHECK:** Define uma condição que cada valor da coluna deve satisfazer. Por exemplo, uma restrição `CHECK` pode garantir que a idade em uma coluna idade seja sempre maior que zero.
+
