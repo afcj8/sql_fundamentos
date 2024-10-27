@@ -47,3 +47,15 @@ SELECT COUNT(*) AS total_registros,
        AVG(coluna_numerica) AS media_valores
 FROM nome_tabela;
 ```
+
+## 4.5. Agrupamento de Dados (GROUP BY)
+
+A cláusula `GROUP BY` é utilizada para agrupar registros com base em uma ou mais colunas, permitindo aplicar funções de agregação em grupos de dados. Exemplo:
+
+```
+SELECT coluna1, COUNT(*) AS total
+FROM nome_tabela
+GROUP BY nome_coluna1;
+```
+
+Essas técnicas avançadas são fundamentais para realizar análises mais complexas e obter insights significativos a partir dos dados armazenados.
