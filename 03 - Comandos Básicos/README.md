@@ -60,3 +60,4 @@ No contexto de bancos de dados, constraints (ou restrições) são regras aplica
 
 5. **CHECK:** Define uma condição que cada valor da coluna deve satisfazer. Por exemplo, uma restrição `CHECK` pode garantir que a idade em uma coluna idade seja sempre maior que zero.
 
+6. **DEFAULT:** Define um valor padrão para a coluna, utilizado automaticamente quando nenhum valor específico é fornecido na inserção de um novo registro.
