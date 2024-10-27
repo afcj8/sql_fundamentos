@@ -23,3 +23,25 @@ A DML permite manipular os dados dentro das tabelas, possibilitando a inserção
 A DQL é usada exclusivamente para consultas, permitindo recuperar dados armazenados no banco de dados. Seu principal comando é:
 
 - **SELECT:** extrai dados das tabelas com base em critérios específicos.
+
+## 3.1. Comando CREATE
+
+O comando `CREATE` da DDL é usado para criar a estrutura inicial do banco de dados e suas tabelas. Abaixo estão exemplos de uso:
+
+- **Criar um banco de dados:**
+
+```
+CREATE DATABASE nome_do_banco_de_dados;
+```
+
+- **Criar uma tabela:**
+
+```
+CREATE TABLE nome_tabela (
+    nome_coluna tipo_dado constraints,
+    nome_coluna tipo_dado constraints,
+    nome_coluna tipo_dado constraints
+);
+```
+
+Essa organização de comandos em categorias específicas facilita o gerenciamento e a manipulação do banco de dados, oferecendo um conjunto completo de operações para atender a diversas necessidades.
