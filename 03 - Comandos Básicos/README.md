@@ -9,3 +9,11 @@ A DDL é responsável por definir e modificar a estrutura do banco de dados. Ela
 - **CREATE:** cria novos objetos no banco, como bancos de dados ou tabelas.
 - **ALTER:** modifica a estrutura de um objeto existente, como a adição de uma coluna a uma tabela.
 - **DROP:** remove objetos do banco de dados.
+
+**DML (Data Manipulation Language)**
+
+A DML permite manipular os dados dentro das tabelas, possibilitando a inserção, atualização e remoção de registros. Seus principais comandos são:
+
+- **INSERT:** adiciona novos registros a uma tabela.
+- **UPDATE:** modifica dados existentes em uma tabela.
+- **DELETE:** remove registros de uma tabela.
