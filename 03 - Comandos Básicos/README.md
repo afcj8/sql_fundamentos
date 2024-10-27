@@ -87,11 +87,18 @@ SELECT * FROM nome_tabela;
 Para consultar colunas específicas, basta listar os nomes das colunas desejadas:
 
 ```
-SELECT coluna1, coluna2 FROM nome_tabela;
+SELECT nome_coluna1, nome_coluna2 FROM nome_tabela;
 ```
 
-Nesse caso, apenas os dados de `coluna1` e `coluna2` serão retornados.
+Nesse caso, apenas os dados de `nome_coluna1` e `nome_coluna2` serão retornados.
 
 ## 3.4. Comando UPDATE
 
-O comando `UPDATE` permite modificar dados em uma tabela existente.
+O comando `UPDATE` permite modificar dados em uma tabela existente. A estrutura básica do comando é a seguinte:
+
+```
+UPDATE nome_tabela
+SET nome_coluna1 = novo_dado;
+```
+
+Esse comando altera o valor de `nome_coluna1` para `novo_dado` em todos os registros da tabela. Para atualizar dados em registros específicos, é recomendável usar uma cláusula `WHERE`.
