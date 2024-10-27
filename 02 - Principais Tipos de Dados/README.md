@@ -26,3 +26,13 @@ O PostgreSQL oferece uma ampla variedade de tipos de dados para armazenar inform
 | char(n)    | n bytes  | Texto de tamanho fixo; preenche com espaços se o valor for menor que n.          |
 | varchar(n) | n bytes  | Texto de tamanho variável com limite máximo de n caracteres.                     |
 | text       | Variável | Texto de tamanho ilimitado; usado para armazenar grandes textos.                 |
+
+## 2.4. Data e Hora
+
+| Tipo        | Tamanho  | Descrição                                                          |
+| ----------- | -------- | ------------------------------------------------------------------ |
+| date        | 4 bytes  | Armazena apenas a data (ano, mês, dia).                            |
+| time        | 8 bytes  | Armazena apenas a hora (hora, minuto, segundo).                    |
+| timestamp   | 8 bytes  | Armazena data e hora combinadas (sem fuso horário).                |
+| timestamptz | 8 bytes  | Armazena data e hora com fuso horário.                             |
+| interval    | 12 bytes | Representa um intervalo de tempo (diferença entre datas ou horas). |
