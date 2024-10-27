@@ -48,4 +48,7 @@ Essa organização de comandos em categorias específicas facilita o gerenciamen
 
 ### 3.1.1. Constraints
 
-No contexto de bancos de dados, constraints (ou restrições) são regras aplicadas às colunas de uma tabela para garantir a integridade e consistência dos dados. Elas limitam os tipos de dados que podem ser inseridos em uma coluna e ajudam a prevenir erros, mantendo a estrutura e a qualidade das informações armazenadas.
+No contexto de bancos de dados, constraints (ou restrições) são regras aplicadas às colunas de uma tabela para garantir a integridade e consistência dos dados. Elas limitam os tipos de dados que podem ser inseridos em uma coluna e ajudam a prevenir erros, mantendo a estrutura e a qualidade das informações armazenadas. Abaixo estão os principais tipos de constraints usados em SQL:
+
+1. **PRIMARY KEY:** Define uma coluna (ou conjunto de colunas) que identifica unicamente cada linha da tabela. Cada valor de `PRIMARY KEY` deve ser único e não pode ser nulo.
+
