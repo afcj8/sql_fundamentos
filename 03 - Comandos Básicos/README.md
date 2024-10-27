@@ -52,3 +52,5 @@ No contexto de bancos de dados, constraints (ou restrições) são regras aplica
 
 1. **PRIMARY KEY:** Define uma coluna (ou conjunto de colunas) que identifica unicamente cada linha da tabela. Cada valor de `PRIMARY KEY` deve ser único e não pode ser nulo.
 
+2. **FOREIGN KEY:** Estabelece uma relação entre tabelas, vinculando uma coluna a uma `PRIMARY KEY` de outra tabela, para garantir a integridade referencial. Assim, evita que sejam inseridos valores que não existam na tabela referenciada.
+
