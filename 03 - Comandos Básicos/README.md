@@ -56,3 +56,5 @@ No contexto de bancos de dados, constraints (ou restrições) são regras aplica
 
 3. **UNIQUE:** Assegura que todos os valores de uma coluna (ou conjunto de colunas) sejam únicos, ou seja, impede a inserção de valores duplicados.
 
+4. **NOT NULL:** Restringe uma coluna para que não possa conter valores nulos, obrigando a inserção de um valor válido em todos os registros.
+
