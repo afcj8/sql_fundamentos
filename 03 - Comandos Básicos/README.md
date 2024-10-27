@@ -45,3 +45,7 @@ CREATE TABLE nome_tabela (
 ```
 
 Essa organização de comandos em categorias específicas facilita o gerenciamento e a manipulação do banco de dados, oferecendo um conjunto completo de operações para atender a diversas necessidades.
+
+### 3.1.1. Constraints
+
+No contexto de bancos de dados, constraints (ou restrições) são regras aplicadas às colunas de uma tabela para garantir a integridade e consistência dos dados. Elas limitam os tipos de dados que podem ser inseridos em uma coluna e ajudam a prevenir erros, mantendo a estrutura e a qualidade das informações armazenadas.
