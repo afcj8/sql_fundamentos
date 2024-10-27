@@ -38,3 +38,12 @@ As funções de agregação permitem realizar cálculos sobre um conjunto de dad
 - **AVG:** calcula a média de valores.
 - **MAX:** retorna o maior valor.
 - **MIN:** retorna o menor valor.
+
+Exemplo de uso:
+
+```
+SELECT COUNT(*) AS total_registros,
+       SUM(coluna_numerica) AS soma_total,
+       AVG(coluna_numerica) AS media_valores
+FROM nome_tabela;
+```
