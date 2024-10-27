@@ -17,3 +17,9 @@ A DML permite manipular os dados dentro das tabelas, possibilitando a inserção
 - **INSERT:** adiciona novos registros a uma tabela.
 - **UPDATE:** modifica dados existentes em uma tabela.
 - **DELETE:** remove registros de uma tabela.
+
+**DQL (Data Query Language)**
+
+A DQL é usada exclusivamente para consultas, permitindo recuperar dados armazenados no banco de dados. Seu principal comando é:
+
+- **SELECT:** extrai dados das tabelas com base em critérios específicos.
