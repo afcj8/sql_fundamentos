@@ -10,3 +10,12 @@ A cláusula `WHERE` é utilizada para filtrar registros com base em condições 
 SELECT * FROM nome_tabela
 WHERE nome_coluna = condição;
 ```
+
+## 4.2. Ordenação (ORDER BY)
+
+A cláusula `ORDER BY` permite ordenar os resultados de uma consulta com base em uma ou mais colunas, em ordem crescente ou decrescente. Exemplo:
+
+```
+SELECT * FROM nome_tabela
+ORDER BY nome_coluna1 ASC, nome_coluna2 DESC;
+```
