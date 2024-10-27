@@ -18,3 +18,11 @@ O PostgreSQL oferece uma ampla variedade de tipos de dados para armazenar inform
 | double precision | 8 bytes | Número com ponto flutuante de precisão dupla.                          |
 | numeric | Variável | Armazena números com precisão exata e escala definida (ideal para valores monetários). |
 | decimal | Variável | Armazena números com precisão exata e escala definida (ideal para valores monetários). |
+
+## 2.3. Texto e Caracteres
+
+| Tipo       | Tamanho  | Descrição                                                                        |
+| ---------- | -------- | -------------------------------------------------------------------------------- |
+| char(n)    | n bytes  | Texto de tamanho fixo; preenche com espaços se o valor for menor que n.          |
+| varchar(n) | n bytes  | Texto de tamanho variável com limite máximo de n caracteres.                     |
+| text       | Variável | Texto de tamanho ilimitado; usado para armazenar grandes textos.                 |
