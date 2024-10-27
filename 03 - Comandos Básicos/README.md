@@ -91,3 +91,7 @@ SELECT coluna1, coluna2 FROM nome_tabela;
 ```
 
 Nesse caso, apenas os dados de `coluna1` e `coluna2` serão retornados.
+
+## 3.4. Comando UPDATE
+
+O comando `UPDATE` permite modificar dados em uma tabela existente.
