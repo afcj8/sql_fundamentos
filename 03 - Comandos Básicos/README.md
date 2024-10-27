@@ -105,4 +105,10 @@ Esse comando altera o valor de `nome_coluna1` para `novo_dado` em todos os regis
 
 ## 3.5. Comando DELETE
 
-O comando `DELETE` remove linhas de uma tabela.
+O comando `DELETE` remove linhas de uma tabela. A estrutura básica do comando é:
+
+```
+DELETE FROM nome_tabela;
+```
+
+Sem especificações adicionais, todos os registros da tabela serão excluídos. Para deletar apenas registros específicos, recomenda-se o uso da cláusula `WHERE`.
