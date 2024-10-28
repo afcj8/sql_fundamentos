@@ -20,3 +20,7 @@ SELECT a.coluna1, b.coluna2
 FROM tabela_a a
 INNER JOIN tabela_b b ON a.id = b.a_id;
 ```
+
+## 5.2. LEFT JOIN
+
+A cláusula `LEFT JOIN` retorna todos os registros da tabela à esquerda e os registros correspondentes da tabela à direita. Se uma linha da tabela esquerda não tiver correspondência na tabela direita, os valores das colunas da tabela direita serão retornados como NULL.
