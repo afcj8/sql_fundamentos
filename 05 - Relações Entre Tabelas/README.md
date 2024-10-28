@@ -63,3 +63,11 @@ A cláusula `FULL JOIN` retorna todos os registros quando há uma correspondênc
     <img src="../imgs/full_join.png" width="30%" style="max-height: 50vh;"/>
     <p>Figura 5.4: Cláusula FULL JOIN.</p>
 </div>
+
+**Exemplo de FULL JOIN:**
+
+```
+SELECT a.coluna1, b.coluna2
+FROM tabela_a a
+FULL JOIN tabela_b b ON a.id = b.a_id;
+```
