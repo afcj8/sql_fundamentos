@@ -22,3 +22,18 @@ UPDATE contas SET saldo = saldo - 500 WHERE id_conta = 1;
 -- Confirmar a transação, aplicando as mudanças
 COMMIT;
 ```
+
+Caso ocorra algum erro durante a execução da transação, pode-se desfazer todas as operações realizadas com `ROLLBACK`, garantindo que nenhuma alteração parcial seja salva.
+
+```
+BEGIN;
+
+-- Inserir um novo cliente
+INSERT INTO clientes (nome, email) VALUES ('Ana Souza', 'ana@email.com');
+
+-- Tentar uma operação com erro
+UPDATE contas SET saldo = saldo - 1000 WHERE id_conta = NULL;  -- Erro: id_conta inválido
+
+-- Reverter a transação devido ao erro
+ROLLBACK;
+```
