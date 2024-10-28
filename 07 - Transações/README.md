@@ -1,0 +1,3 @@
+# 7. Transações
+
+A manipulação de dados em sistemas de gerenciamento de bancos de dados (SGBD) exige um controle eficiente para garantir a integridade e confiabilidade das informações. Esse controle é feito, em grande parte, pelo uso de transações, que permitem a execução de operações de forma segura. As transações são controladas com os comandos `BEGIN`, `COMMIT` e `ROLLBACK`, que asseguram a consistência dos dados mesmo em casos de falhas ou erros.
