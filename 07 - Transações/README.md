@@ -7,3 +7,18 @@ A manipulação de dados em sistemas de gerenciamento de bancos de dados (SGBD) 
 2. **COMMIT:** Confirma todas as operações realizadas na transação, aplicando-as permanentemente no banco de dados.
 
 3. **ROLLBACK:** Cancela todas as operações da transação atual, retornando o banco de dados ao estado anterior à sua execução.
+
+O exemplo a seguir ilustra uma transação básica para manipulação de dados no PostgreSQL:
+
+```
+BEGIN;  -- Início da transação
+
+-- Inserir um novo cliente
+INSERT INTO clientes (nome, email) VALUES ('João Silva', 'joao@email.com');
+
+-- Atualizar saldo em uma conta
+UPDATE contas SET saldo = saldo - 500 WHERE id_conta = 1;
+
+-- Confirmar a transação, aplicando as mudanças
+COMMIT;
+```
