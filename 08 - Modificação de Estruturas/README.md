@@ -18,3 +18,11 @@ Neste exemplo, uma nova coluna chamada `nome_coluna` é adicionada à tabela `no
 ## 8.2. DROP TABLE
 
 O comando `DROP` é utilizado para remover uma tabela ou um banco de dados inteiro, juntamente com todos os dados contidos nele. Esta operação é irreversível, e todas as informações associadas à tabela ou banco de dados serão permanentemente perdidas.
+
+**Exemplo:**
+
+```
+DROP TABLE nome_tabela;
+```
+
+Neste exemplo, a tabela `nome_tabela` é removida do banco de dados, excluindo todos os dados e a estrutura associada a ela.
