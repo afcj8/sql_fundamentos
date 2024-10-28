@@ -41,3 +41,19 @@ ROLLBACK;
 ## 7.1. Confiabilidade e Integridade dos Dados
 
 As transações desempenham um papel importante para assegurar a confiabilidade e integridade dos dados. Ao utilizar o controle de transações, é possível garantir que operações complexas sejam tratadas de forma atômica — ou seja, ou todas as operações da transação são realizadas com sucesso ou nenhuma é aplicada. Essa abordagem evita inconsistências no banco de dados, como registros incompletos ou valores incorretos.
+
+Por exemplo, em uma transação bancária que envolve a transferência de valores entre contas, a falha na atualização de uma conta implica em reverter toda a operação para manter o saldo inicial.
+
+```
+BEGIN;
+
+-- Debitar de uma conta
+UPDATE contas SET saldo = saldo - 200 WHERE id_conta = 1;
+
+-- Creditar em outra conta
+UPDATE contas SET saldo = saldo + 200 WHERE id_conta = 2;
+
+COMMIT;  -- Confirmar a transação somente se ambas as operações forem bem-sucedidas
+```
+
+Se alguma das operações falhar, o PostgreSQL acionará automaticamente um `ROLLBACK`, garantindo que nenhum saldo incorreto seja salvo e preservando a integridade do banco de dados.
