@@ -37,3 +37,7 @@ UPDATE contas SET saldo = saldo - 1000 WHERE id_conta = NULL;  -- Erro: id_conta
 -- Reverter a transação devido ao erro
 ROLLBACK;
 ```
+
+## 7.1. Confiabilidade e Integridade dos Dados
+
+As transações desempenham um papel importante para assegurar a confiabilidade e integridade dos dados. Ao utilizar o controle de transações, é possível garantir que operações complexas sejam tratadas de forma atômica — ou seja, ou todas as operações da transação são realizadas com sucesso ou nenhuma é aplicada. Essa abordagem evita inconsistências no banco de dados, como registros incompletos ou valores incorretos.
