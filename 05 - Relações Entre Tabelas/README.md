@@ -29,3 +29,11 @@ A cláusula `LEFT JOIN` retorna todos os registros da tabela à esquerda e os re
     <img src="../imgs/left_join.png" width="30%" style="max-height: 50vh;"/>
     <p>Figura 5.2: Cláusula LEFT JOIN.</p>
 </div>
+
+**Exemplo de LEFT JOIN:**
+
+```
+SELECT a.coluna1, b.coluna2
+FROM tabela_a a
+LEFT JOIN tabela_b b ON a.id = b.a_id;
+```
