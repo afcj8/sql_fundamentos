@@ -37,3 +37,7 @@ SELECT a.coluna1, b.coluna2
 FROM tabela_a a
 LEFT JOIN tabela_b b ON a.id = b.a_id;
 ```
+
+## 5.3. RIGHT JOIN
+
+A cláusula `RIGHT JOIN` retorna todos os registros da tabela à direita e os registros correspondentes da tabela à esquerda. Se uma linha da tabela direita não tiver correspondência na tabela esquerda, os valores das colunas da tabela esquerda serão retornados como NULL.
