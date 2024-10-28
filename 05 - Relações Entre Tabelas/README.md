@@ -23,4 +23,9 @@ INNER JOIN tabela_b b ON a.id = b.a_id;
 
 ## 5.2. LEFT JOIN
 
-A cláusula `LEFT JOIN` retorna todos os registros da tabela à esquerda e os registros correspondentes da tabela à direita. Se uma linha da tabela esquerda não tiver correspondência na tabela direita, os valores das colunas da tabela direita serão retornados como NULL.
+A cláusula `LEFT JOIN` retorna todos os registros da tabela à esquerda e os registros correspondentes da tabela à direita. Se uma linha da tabela esquerda não tiver correspondência na tabela direita, os valores das colunas da tabela direita serão retornados como NULL. A Figura 5.2 a seguir ilustra a cláusula `LEFT JOIN` por meio de um diagrama de Venn.
+
+<div align="center">
+    <img src="../imgs/left_join.png" width="30%" style="max-height: 50vh;"/>
+    <p>Figura 5.2: Cláusula LEFT JOIN.</p>
+</div>
