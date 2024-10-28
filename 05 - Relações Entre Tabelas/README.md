@@ -40,4 +40,9 @@ LEFT JOIN tabela_b b ON a.id = b.a_id;
 
 ## 5.3. RIGHT JOIN
 
-A cláusula `RIGHT JOIN` retorna todos os registros da tabela à direita e os registros correspondentes da tabela à esquerda. Se uma linha da tabela direita não tiver correspondência na tabela esquerda, os valores das colunas da tabela esquerda serão retornados como NULL.
+A cláusula `RIGHT JOIN` retorna todos os registros da tabela à direita e os registros correspondentes da tabela à esquerda. Se uma linha da tabela direita não tiver correspondência na tabela esquerda, os valores das colunas da tabela esquerda serão retornados como NULL. A Figura 5.3 a seguir ilustra a cláusula `RIGHT JOIN` por meio de um diagrama de Venn.
+
+<div align="center">
+    <img src="../imgs/right_join.png" width="30%" style="max-height: 50vh;"/>
+    <p>Figura 5.3: Cláusula RIGHT JOIN.</p>
+</div>
