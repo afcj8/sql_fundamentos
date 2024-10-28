@@ -6,7 +6,12 @@ Um `JOIN` permite combinar colunas de uma (auto-junção) ou mais tabelas, utili
 
 ## 5.1. INNER JOIN
 
-A cláusula INNER JOIN compara cada linha da tabela A com as linhas da tabela B para encontrar todos os pares de linhas que satisfazem a condição de junção. Se a condição for avaliada como verdadeira (TRUE), os valores das colunas correspondentes das tabelas A e B são combinados em uma nova linha e incluídos no conjunto de resultados.
+A cláusula `INNER JOIN` compara cada linha da tabela A com as linhas da tabela B para encontrar todos os pares de linhas que satisfazem a condição de junção. Se a condição for avaliada como verdadeira (TRUE), os valores das colunas correspondentes das tabelas A e B são combinados em uma nova linha e incluídos no conjunto de resultados. A Figura 5.1 a seguir ilustra a cláusula `INNER JOIN` por meio de um diagrama de Venn.
+
+<div align="center">
+    <img src="../imgs/inner_join.png" width="30%" style="max-height: 50vh;"/>
+    <p>Figura 5.1: Cláusula INNER JOIN.</p>
+</div>
 
 **Exemplo de INNER JOIN:**
 
