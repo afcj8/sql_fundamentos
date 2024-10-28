@@ -54,3 +54,7 @@ SELECT a.coluna1, b.coluna2
 FROM tabela_a a
 RIGHT JOIN tabela_b b ON a.id = b.a_id;
 ```
+
+## 5.4. FULL JOIN
+
+A cláusula `FULL JOIN` retorna todos os registros quando há uma correspondência na tabela esquerda ou na tabela direita, combinando as funções do `LEFT JOIN` e do `RIGHT JOIN`. Se não houver correspondência, as colunas da tabela sem correspondência terão valores NULL.
