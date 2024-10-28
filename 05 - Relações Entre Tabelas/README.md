@@ -46,3 +46,11 @@ A cláusula `RIGHT JOIN` retorna todos os registros da tabela à direita e os re
     <img src="../imgs/right_join.png" width="30%" style="max-height: 50vh;"/>
     <p>Figura 5.3: Cláusula RIGHT JOIN.</p>
 </div>
+
+**Exemplo de RIGHT JOIN:**
+
+```
+SELECT a.coluna1, b.coluna2
+FROM tabela_a a
+RIGHT JOIN tabela_b b ON a.id = b.a_id;
+```
