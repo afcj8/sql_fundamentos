@@ -14,3 +14,7 @@ ADD nome_coluna VARCHAR(255);
 ```
 
 Neste exemplo, uma nova coluna chamada `nome_coluna` é adicionada à tabela `nome_tabela`, com o tipo de dados `VARCHAR` e um tamanho máximo de 255 caracteres.
+
+## 8.2. DROP TABLE
+
+O comando `DROP` é utilizado para remover uma tabela ou um banco de dados inteiro, juntamente com todos os dados contidos nele. Esta operação é irreversível, e todas as informações associadas à tabela ou banco de dados serão permanentemente perdidas.
