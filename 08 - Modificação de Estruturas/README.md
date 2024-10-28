@@ -38,5 +38,3 @@ TRUNCATE TABLE nome_tabela;
 ```
 
 Neste exemplo, todos os dados da tabela `nome_tabela` são removidos, mas a estrutura da tabela permanece intacta, permitindo que novos dados sejam inseridos imediatamente após a operação.
-
-Todos esses comandos fazem parte da categoria DDL (Data Definition Language), que inclui também o comando `CREATE`. Essa categoria refere-se a um conjunto de comandos utilizados para definir, modificar e gerenciar a estrutura dos objetos em um banco de dados. Através da DDL, é possível criar novas tabelas, alterar estruturas existentes e remover objetos, garantindo assim uma gestão eficaz da arquitetura de dados.
