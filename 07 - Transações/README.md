@@ -57,3 +57,11 @@ COMMIT;  -- Confirmar a transação somente se ambas as operações forem bem-su
 ```
 
 Se alguma das operações falhar, o PostgreSQL acionará automaticamente um `ROLLBACK`, garantindo que nenhum saldo incorreto seja salvo e preservando a integridade do banco de dados.
+
+## 7.2. Vantagens do Controle de Transações
+
+- **Confiabilidade:** Reduz o risco de inconsistências devido a falhas inesperadas.
+- **Integridade dos Dados:** Garante que todas as operações dentro de uma transação sejam concluídas de forma coesa.
+- **Segurança:** Minimiza a perda de dados e ajuda a controlar operações simultâneas.
+
+O uso adequado de transações é fundamental em PostgreSQL e outros SGBDs, pois promove a segurança e integridade dos dados, evitando problemas comuns em sistemas de gerenciamento de informações.
