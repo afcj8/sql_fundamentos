@@ -26,3 +26,7 @@ DROP TABLE nome_tabela;
 ```
 
 Neste exemplo, a tabela `nome_tabela` é removida do banco de dados, excluindo todos os dados e a estrutura associada a ela.
+
+## 8.3. TRUNCATE TABLE
+
+O comando `TRUNCATE` é utilizado para remover todos os registros de uma tabela de forma rápida e eficiente, sem deletar a estrutura da tabela. Diferentemente do comando `DELETE`, o `TRUNCATE` não gera registros de transação para cada linha removida, resultando em um desempenho superior.
