@@ -5,3 +5,5 @@ A manipulação de dados em sistemas de gerenciamento de bancos de dados (SGBD) 
 1. **BEGIN:** Inicia uma nova transação. Todas as operações subsequentes fazem parte dessa transação até que ela seja finalizada.
 
 2. **COMMIT:** Confirma todas as operações realizadas na transação, aplicando-as permanentemente no banco de dados.
+
+3. **ROLLBACK:** Cancela todas as operações da transação atual, retornando o banco de dados ao estado anterior à sua execução.
