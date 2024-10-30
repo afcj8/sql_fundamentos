@@ -1,0 +1,3 @@
+# 9. Views
+
+Uma view é uma "tabela virtual" que exibe os resultados de uma query específica. Ela não armazena dados fisicamente; em vez disso, armazena a consulta que define sua estrutura e exibe os resultados dessa consulta quando a view é acessada. A view pode incluir uma seleção de colunas, filtros, junções entre tabelas e até mesmo agregações, permitindo gerar uma "visão" personalizada sobre os dados.
