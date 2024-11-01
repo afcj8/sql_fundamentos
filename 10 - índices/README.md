@@ -17,3 +17,13 @@ DROP INDEX idx_nome_cliente;
 ```
 
 É importante ressaltar que a remoção de um índice pode impactar negativamente o desempenho de consultas que dependem dessa coluna para otimizar a busca.
+
+## 10.1. Análise de Desempenho de Consultas
+
+O PostgreSQL oferece ferramentas como o `EXPLAIN` para analisar e entender o plano de execução de uma consulta, fornecendo detalhes sobre como o banco de dados irá processá-la. Ao utilizar `EXPLAIN` antes de uma consulta, como em:
+
+```
+EXPLAIN SELECT * FROM clientes WHERE nome = 'João';
+```
+
+O PostgreSQL exibirá informações sobre o uso do índice `idx_nome_cliente`, caso exista. Essa análise é fundamental para identificar gargalos e ajustar índices conforme necessário, promovendo um equilíbrio entre o custo de manutenção dos índices e o ganho de desempenho nas consultas.
