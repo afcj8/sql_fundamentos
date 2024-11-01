@@ -9,3 +9,11 @@ A criação de um índice é feita com a instrução `CREATE INDEX`. Por exemplo
 ```
 CREATE INDEX idx_nome_cliente ON clientes(nome);
 ```
+
+Esse índice agora permitirá consultas mais rápidas ao procurar registros com base na coluna `nome`. Para remover um índice, utiliza-se o comando `DROP INDEX`:
+
+```
+DROP INDEX idx_nome_cliente;
+```
+
+É importante ressaltar que a remoção de um índice pode impactar negativamente o desempenho de consultas que dependem dessa coluna para otimizar a busca.
