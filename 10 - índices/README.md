@@ -1,0 +1,3 @@
+# 10. Índices
+
+Índices são estruturas de dados auxiliares criadas sobre colunas de tabelas em bancos de dados para melhorar o desempenho de consultas. No PostgreSQL, o índice age como um "atalho" que permite ao sistema localizar dados mais rapidamente, sem precisar percorrer toda a tabela. Eles funcionam de maneira similar ao índice de um livro, onde o conteúdo é organizado para facilitar a localização rápida de informações.
