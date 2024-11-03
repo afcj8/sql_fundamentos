@@ -33,3 +33,21 @@ BEFORE UPDATE ON minha_tabela
 FOR EACH ROW
 EXECUTE FUNCTION atualiza_data_modificacao();
 ```
+
+2. **Auditoria de Alterações:** Gravar em uma tabela de auditoria todas as mudanças feitas em uma tabela principal.
+
+```
+CREATE OR REPLACE FUNCTION log_alteracao()
+RETURNS TRIGGER AS $$
+BEGIN
+   INSERT INTO auditoria (tabela, operacao, usuario, data, dados_antigos, dados_novos)
+   VALUES (TG_TABLE_NAME, TG_OP, current_user, NOW(), OLD, NEW);
+   RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER log_alteracao_trigger
+AFTER UPDATE OR DELETE ON minha_tabela
+FOR EACH ROW
+EXECUTE FUNCTION log_alteracao();
+```
