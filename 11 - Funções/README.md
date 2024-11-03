@@ -24,3 +24,25 @@ $$ LANGUAGE plpgsql;
 ```
 
 Essa função recebe um valor em Celsius e retorna o equivalente em Fahrenheit.
+
+### 11.1.2. Funções de Tabela (Set-Returning Functions)
+
+As funções de tabela, também conhecidas como Set-Returning Functions (SRFs), retornam um conjunto de registros, semelhante a uma tabela. Esse tipo de função é útil para consultas que necessitam de uma coleção de resultados, como retornar múltiplas linhas ou colunas.
+
+**Exemplo**
+
+Abaixo, uma função de tabela que retorna todos os produtos de uma categoria específica:
+
+```
+CREATE FUNCTION produtos_por_categoria(categoria_id INT)
+RETURNS TABLE(id INT, nome TEXT, preco NUMERIC) AS $$
+BEGIN
+    RETURN QUERY
+    SELECT id, nome, preco
+    FROM produtos
+    WHERE categoria_id = categoria_id;
+END;
+$$ LANGUAGE plpgsql;
+```
+
+Essa função retorna uma tabela com os produtos de uma categoria específica, incluindo os campos `id`, `nome` e `preco`.
