@@ -14,3 +14,22 @@ Triggers são úteis para:
 - **Manter Integridade de Dados:** ajudam a garantir que os dados inseridos ou modificados atendam a determinadas condições.
 - **Auditoria e Log:** registram automaticamente mudanças ou tentativas de acesso a uma tabela.
 - **Automação de Processos:** simplificam operações complexas que precisam ocorrer em conjunto com modificações na tabela.
+
+**Exemplos de Uso de Triggers**
+
+1. **Atualizar Data de Modificação:** Um trigger pode atualizar automaticamente uma coluna `updated_at` sempre que uma linha é alterada.
+
+```
+CREATE OR REPLACE FUNCTION atualiza_data_modificacao()
+RETURNS TRIGGER AS $$
+BEGIN
+   NEW.updated_at = NOW();
+   RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER atualiza_data_modificacao_trigger
+BEFORE UPDATE ON minha_tabela
+FOR EACH ROW
+EXECUTE FUNCTION atualiza_data_modificacao();
+```
