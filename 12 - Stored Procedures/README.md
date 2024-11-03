@@ -1,0 +1,3 @@
+# 12. Stored Procedures
+
+Stored procedures são semelhantes às funções, mas, diferentemente destas, não retornam um valor e são executadas com o comando `CALL`. Elas foram introduzidas no PostgreSQL na versão 11 e são úteis para manipular transações complexas, uma vez que podem iniciar, confirmar e desfazer transações. Stored procedures permitem a execução de uma sequência de instruções SQL com controle de transações e lógica avançada.
