@@ -51,3 +51,22 @@ AFTER UPDATE OR DELETE ON minha_tabela
 FOR EACH ROW
 EXECUTE FUNCTION log_alteracao();
 ```
+
+3. **Garantir Integridade de Dados Relacionados:** Supondo que, em um sistema de inventário, a quantidade de produtos em estoque não possa ser negativa. Um trigger pode impedir que um `UPDATE` ou `DELETE` cause uma quantidade inválida.
+
+```
+CREATE OR REPLACE FUNCTION valida_estoque()
+RETURNS TRIGGER AS $$
+BEGIN
+   IF NEW.quantidade < 0 THEN
+      RAISE EXCEPTION 'Quantidade em estoque não pode ser negativa';
+   END IF;
+   RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER valida_estoque_trigger
+BEFORE UPDATE ON estoque
+FOR EACH ROW
+EXECUTE FUNCTION valida_estoque();
+```
