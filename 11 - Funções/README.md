@@ -46,3 +46,9 @@ $$ LANGUAGE plpgsql;
 ```
 
 Essa função retorna uma tabela com os produtos de uma categoria específica, incluindo os campos `id`, `nome` e `preco`.
+
+### 11.1.3. Funções de Agregação
+
+Funções de agregação realizam operações sobre um conjunto de valores, retornando um único valor agregado, como somas, médias ou contagens. São amplamente usadas em consultas que envolvem cálculos em várias linhas de uma tabela, como `SUM`, `AVG`, `MAX` e `MIN`.
+
+No PostgreSQL, também é possível criar funções de agregação personalizadas, mas isso é mais complexo e envolve o uso de `CREATE AGGREGATE` para definir o comportamento desejado.
