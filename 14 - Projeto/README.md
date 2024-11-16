@@ -23,3 +23,10 @@ Representa os pedidos realizados pelos clientes. Cada pedido é identificado por
 
 5. **ItemPedido:**
 Detalha os itens de um pedido. Cada item é identificado por um `id` e está associado a um pedido (`id_pedido`) e a um produto (`id_produto`). Além disso, contém informações como a quantidade do produto no pedido (`quantidade`) e o valor total do item (`valor_total`).
+
+## 14.2. Relacionamentos
+
+- A tabela `Categoria` está relacionada à tabela `Produto` em uma relação 1:n.
+- A tabela `Produto` está associada à tabela `ItemPedido` em uma relação 1:n.
+- A tabela `Cliente` está associada à tabela `Pedido` uma relação 1:n.
+- A tabela `Pedido` está associada à tabela `ItemPedido` em uma relação 1:n.
