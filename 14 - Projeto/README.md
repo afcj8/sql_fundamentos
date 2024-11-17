@@ -218,3 +218,21 @@ Para executar essa view basta utilizar o comando abaixo:
 ```
 SELECT * FROM resumo_pedidos;
 ```
+
+2. **View para listar o estoque de produtos:** Essa view exibe informações sobre os produtos cadastrados, incluindo o nome do produto, sua categoria e a quantidade disponível em estoque.
+
+```
+CREATE VIEW estoque_produtos AS
+SELECT 
+    produto.nome_produto,
+    categoria.nome_categoria,
+    produto.quantidade AS quantidade_em_estoque
+FROM produto
+JOIN categoria ON produto.id_categoria = categoria.id;
+```
+
+Para executar essa view basta utilizar o comando abaixo:
+
+```
+SELECT * FROM estoque_produtos;
+```
