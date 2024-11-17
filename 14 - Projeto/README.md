@@ -139,3 +139,15 @@ INSERT INTO item_pedido (quantidade, preco, id_pedido, id_produto) VALUES
 (1, 349.99, 9, 5), -- Pedido 9, Produto: Teclado Mecânico
 (1, 12999.99, 10, 2); -- Pedido 10, Produto: MacBook Pro
 ```
+
+### 14.3.1. Consultas Simples
+
+1. **Listar todos os clientes cadastrados:** Essa consulta é útil para visualizar rapidamente todos os clientes cadastrados no sistema.
+
+```
+SELECT 
+    nome_cliente, 
+    telefone, 
+    email 
+FROM cliente;
+```
