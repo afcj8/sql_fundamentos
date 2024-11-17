@@ -161,3 +161,24 @@ SELECT
 FROM produto
 JOIN categoria ON produto.id_categoria = categoria.id;
 ```
+
+### 14.3.2. Consultas Complexas
+
+1. **Consulta para listar os pedidos realizados por um cliente específico:** Essa consulta retorna todos os pedidos realizados por um cliente, incluindo a data do pedido, os itens adquiridos, a quantidade de cada item e o valor total do pedido. Neste caso, será o cliente de `id=3`.
+
+```
+SELECT 
+    pedido.id AS id_pedido,
+    pedido.data_pedido,
+    cliente.nome_cliente,
+    produto.nome_produto,
+    item_pedido.quantidade,
+    item_pedido.preco AS preco_unitario,
+    (item_pedido.quantidade * item_pedido.preco) AS valor_total_item
+FROM pedido
+JOIN cliente ON pedido.id_cliente = cliente.id
+JOIN item_pedido ON item_pedido.id_pedido = pedido.id
+JOIN produto ON item_pedido.id_produto = produto.id
+WHERE cliente.id = 3
+ORDER BY pedido.data_pedido;
+```
