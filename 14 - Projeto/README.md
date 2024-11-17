@@ -252,3 +252,7 @@ Ao consultar os pedidos de um cliente específico, como por exemplo, com `id_cli
 ```
 EXPLAIN SELECT * FROM pedido WHERE id_cliente = 1;
 ```
+
+### 14.3.5. Função
+
+Uma função pode ser criada para calcular o valor total de um pedido, considerando a quantidade e o preço dos itens presentes no pedido. A função pode receber o `id_pedido` como parâmetro e retornar o valor total.
