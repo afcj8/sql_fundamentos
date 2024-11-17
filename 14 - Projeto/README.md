@@ -310,3 +310,12 @@ AFTER INSERT ON item_pedido
 FOR EACH ROW
 EXECUTE FUNCTION atualizar_estoque_produto();
 ```
+
+3. **Exemplo de Utilização:** Quando um novo item de pedido é inserido.
+
+```
+INSERT INTO item_pedido (quantidade, preco, id_pedido, id_produto)
+VALUES (2, 100.00, 1, 3);  -- 2 unidades do produto com id_produto = 3
+```
+
+O estoque do produto com `id_produto = 3` será automaticamente reduzido em 2 unidades.
