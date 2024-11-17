@@ -273,3 +273,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 ```
+
+Para calcular o valor total de um pedido específico, basta chamar a função com o `id_pedido` desejado:
+
+```
+SELECT calcular_valor_total_pedido(1);
+```
