@@ -279,3 +279,43 @@ Para calcular o valor total de um pedido específico, basta chamar a função co
 ```
 SELECT calcular_valor_total_pedido(1);
 ```
+
+### 14.3.6. Gatilho
+
+Um gatilho (trigger) pode ser criado para atualizar automaticamente o estoque de produtos sempre que um novo item de pedido for inserido ou atualizado. O gatilho pode ser acionado após a inserção de um item de pedido, ajustando a quantidade do produto no estoque conforme a quantidade do item no pedido.
+
+1. **Função do Gatilho:** Primeiro, cria-se a função que será chamada pelo gatilho. Esta função irá atualizar a quantidade de produtos no estoque.
+
+```
+CREATE OR REPLACE FUNCTION atualizar_estoque_produto()
+RETURNS TRIGGER AS
+$$
+BEGIN
+    -- Atualiza a quantidade do produto no estoque, subtraindo a quantidade do item pedido
+    UPDATE produto
+    SET quantidade = quantidade - NEW.quantidade
+    WHERE id = NEW.id_produto;
+
+    -- Retorna a linha que foi inserida/atualizada no item_pedido
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+```
+
+2. **Gatilho para Acionar a Função:** Agora, cria-se o gatilho que chama essa função sempre que um novo item de pedido for inserido.
+
+```
+CREATE TRIGGER gatilho_atualizar_estoque
+AFTER INSERT ON item_pedido
+FOR EACH ROW
+EXECUTE FUNCTION atualizar_estoque_produto();
+```
+
+3. **Exemplo de Utilização:** Quando um novo item de pedido é inserido.
+
+```
+INSERT INTO item_pedido (quantidade, preco, id_pedido, id_produto)
+VALUES (2, 100.00, 1, 3);  -- 2 unidades do produto com id_produto = 3
+```
+
+O estoque do produto com `id_produto = 3` será automaticamente reduzido em 2 unidades.
