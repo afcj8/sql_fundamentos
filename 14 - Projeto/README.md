@@ -279,3 +279,7 @@ Para calcular o valor total de um pedido específico, basta chamar a função co
 ```
 SELECT calcular_valor_total_pedido(1);
 ```
+
+### 14.3.6. Gatilho
+
+Um gatilho (trigger) pode ser criado para atualizar automaticamente o estoque de produtos sempre que um novo item de pedido for inserido ou atualizado. O gatilho pode ser acionado após a inserção de um item de pedido, ajustando a quantidade do produto no estoque conforme a quantidade do item no pedido.
