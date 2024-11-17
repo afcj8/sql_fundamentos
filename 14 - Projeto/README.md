@@ -85,3 +85,5 @@ CREATE TABLE item_pedido (
 	FOREIGN KEY (id_produto) REFERENCES produto(id)
 );
 ```
+
+A população do banco de dados é uma etapa fundamental para testar e validar o sistema de gestão de pedidos. Com base nas tabelas criadas, os dados iniciais são inseridos para representar cenários reais de operação.
