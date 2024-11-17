@@ -256,3 +256,20 @@ EXPLAIN SELECT * FROM pedido WHERE id_cliente = 1;
 ### 14.3.5. Função
 
 Uma função pode ser criada para calcular o valor total de um pedido, considerando a quantidade e o preço dos itens presentes no pedido. A função pode receber o `id_pedido` como parâmetro e retornar o valor total.
+
+```
+CREATE OR REPLACE FUNCTION calcular_valor_total_pedido(pedido_id INT)
+RETURNS DECIMAL AS
+$$
+DECLARE
+    valor_total DECIMAL := 0;
+BEGIN
+    SELECT SUM(i.quantidade * i.preco)
+    INTO valor_total
+    FROM item_pedido i
+    WHERE i.id_pedido = pedido_id;
+
+    RETURN valor_total;
+END;
+$$ LANGUAGE plpgsql;
+```
