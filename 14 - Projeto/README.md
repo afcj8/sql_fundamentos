@@ -301,3 +301,12 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 ```
+
+2. **Gatilho para Acionar a Função:** Agora, cria-se o gatilho que chama essa função sempre que um novo item de pedido for inserido.
+
+```
+CREATE TRIGGER gatilho_atualizar_estoque
+AFTER INSERT ON item_pedido
+FOR EACH ROW
+EXECUTE FUNCTION atualizar_estoque_produto();
+```
