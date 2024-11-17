@@ -33,7 +33,7 @@ Detalha os itens de um pedido. Cada item é identificado por um `id` e está ass
 
 ## 14.3. Implementação
 
-A implementação do sistema de gestão de pedidos foi projetada para uma loja de produtos eletrônicos. O banco de dados será desenvolvido utilizando PostgreSQL, um sistema de gerenciamento de banco de dados relacional robusto e amplamente utilizado. As tabelas foram definidas com base no modelo relacional apresentado. O banco de dados será criado a partir do comando SQL a seguir, que estabelece sua estrutura inicial.
+A implementação do sistema de gestão de pedidos foi projetada para uma loja de produtos eletrônicos. As tabelas foram definidas com base no modelo relacional apresentado. O banco de dados será criado a partir do comando SQL a seguir:
 
 ```
 CREATE DATABASE sistema_pedidos;
@@ -79,14 +79,14 @@ CREATE TABLE item_pedido (
     id SERIAL PRIMARY KEY,
     quantidade INTEGER NOT NULL,
     preco DECIMAL NOT NULL,
-	id_pedido INTEGER,
-	id_produto INTEGER,
+    id_pedido INTEGER,
+    id_produto INTEGER,
     FOREIGN KEY (id_pedido) REFERENCES pedido(id),
-	FOREIGN KEY (id_produto) REFERENCES produto(id)
+    FOREIGN KEY (id_produto) REFERENCES produto(id)
 );
 ```
 
-A população do banco de dados é uma etapa fundamental para testar e validar o sistema de gestão de pedidos. Com base nas tabelas criadas, os dados iniciais são inseridos para representar cenários reais de operação. A seguir, são apresentados os comandos SQL para popular o banco com cinco registros em cada tabela, garantindo a consistência entre os relacionamentos estabelecidos.
+A população do banco de dados é uma etapa fundamental para testar e validar o sistema de gestão de pedidos. Com base nas tabelas criadas, os dados iniciais são inseridos para representar cenários reais de operação. A seguir, são apresentados os comandos SQL para popular o banco:
 
 ```
 -- Inserir dados na tabela categoria
@@ -245,7 +245,7 @@ Um índice pode ser criado para otimizar a busca por registros em uma tabela. No
 CREATE INDEX idx_id_cliente ON pedido(id_cliente);
 ```
 
-**Exemplo de consulta para verificar o uso do índice:**
+**Exemplo de consulta para verificar o uso do índice**
 
 Ao consultar os pedidos de um cliente específico, como por exemplo, com `id_cliente = 1`, a consulta seria:
 
