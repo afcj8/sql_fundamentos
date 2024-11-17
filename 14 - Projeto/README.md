@@ -30,3 +30,7 @@ Detalha os itens de um pedido. Cada item é identificado por um `id` e está ass
 - A tabela `Produto` está associada à tabela `ItemPedido` em uma relação 1:n.
 - A tabela `Cliente` está associada à tabela `Pedido` uma relação 1:n.
 - A tabela `Pedido` está associada à tabela `ItemPedido` em uma relação 1:n.
+
+## 14.3. Implementação
+
+A implementação do sistema de gestão de pedidos foi projetada para uma loja de produtos eletrônicos.
