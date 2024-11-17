@@ -236,3 +236,19 @@ Para executar essa view basta utilizar o comando abaixo:
 ```
 SELECT * FROM estoque_produtos;
 ```
+
+### 14.3.4. Índice
+
+Um índice pode ser criado para otimizar a busca por registros em uma tabela. No caso da tabela `pedido`, pode ser útil criar um índice na coluna `id_cliente`, já que as consultas frequentemente filtram ou juntam os pedidos com base no cliente.
+
+```
+CREATE INDEX idx_id_cliente ON pedido(id_cliente);
+```
+
+**Exemplo de consulta para verificar o uso do índice:**
+
+Ao consultar os pedidos de um cliente específico, como por exemplo, com `id_cliente = 1`, a consulta seria:
+
+```
+EXPLAIN SELECT * FROM pedido WHERE id_cliente = 1;
+```
