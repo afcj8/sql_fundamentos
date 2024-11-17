@@ -236,3 +236,7 @@ Para executar essa view basta utilizar o comando abaixo:
 ```
 SELECT * FROM estoque_produtos;
 ```
+
+### 14.3.4. Índice
+
+Um índice pode ser criado para otimizar a busca por registros em uma tabela. No caso da tabela `pedido`, pode ser útil criar um índice na coluna `id_cliente`, já que as consultas frequentemente filtram ou juntam os pedidos com base no cliente.
