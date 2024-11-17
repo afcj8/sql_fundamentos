@@ -38,3 +38,5 @@ A implementação do sistema de gestão de pedidos foi projetada para uma loja d
 ```
 CREATE DATABASE sistema_pedidos;
 ```
+
+O script a seguir define a estrutura do banco de dados para o sistema de gestão de pedidos. Ele cria as tabelas principais e estabelece os relacionamentos entre elas, conforme especificado no modelo relacional. A definição inclui chaves primárias e estrangeiras, garantindo a integridade referencial e a consistência dos dados.
