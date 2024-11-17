@@ -151,3 +151,13 @@ SELECT
     email 
 FROM cliente;
 ```
+
+2. **Listar produtos com suas categorias:** Essa consulta mostra a relação entre os produtos e suas categorias, facilitando a organização e a análise do catálogo.
+
+```
+SELECT 
+    produto.nome_produto, 
+    categoria.nome_categoria 
+FROM produto
+JOIN categoria ON produto.id_categoria = categoria.id;
+```
