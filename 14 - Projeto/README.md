@@ -195,3 +195,44 @@ JOIN produto ON item_pedido.id_produto = produto.id
 GROUP BY produto.nome_produto
 ORDER BY faturamento_total DESC;
 ```
+
+### 14.3.3. Views
+
+1. **View para listar o resumo de pedidos:** Essa view exibe um resumo dos pedidos realizados, incluindo a data do pedido, o cliente que fez o pedido e o valor total dos itens no pedido.
+
+```
+CREATE VIEW resumo_pedidos AS
+SELECT 
+    pedido.id AS id_pedido,
+    pedido.data_pedido,
+    cliente.nome_cliente,
+    SUM(item_pedido.quantidade * item_pedido.preco) AS valor_total_pedido
+FROM pedido
+JOIN cliente ON pedido.id_cliente = cliente.id
+JOIN item_pedido ON item_pedido.id_pedido = pedido.id
+GROUP BY pedido.id, pedido.data_pedido, cliente.nome_cliente;
+```
+
+Para executar essa view basta utilizar o comando abaixo:
+
+```
+SELECT * FROM resumo_pedidos;
+```
+
+2. **View para listar o estoque de produtos:** Essa view exibe informações sobre os produtos cadastrados, incluindo o nome do produto, sua categoria e a quantidade disponível em estoque.
+
+```
+CREATE VIEW estoque_produtos AS
+SELECT 
+    produto.nome_produto,
+    categoria.nome_categoria,
+    produto.quantidade AS quantidade_em_estoque
+FROM produto
+JOIN categoria ON produto.id_categoria = categoria.id;
+```
+
+Para executar essa view basta utilizar o comando abaixo:
+
+```
+SELECT * FROM estoque_produtos;
+```
