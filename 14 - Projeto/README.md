@@ -283,3 +283,21 @@ SELECT calcular_valor_total_pedido(1);
 ### 14.3.6. Gatilho
 
 Um gatilho (trigger) pode ser criado para atualizar automaticamente o estoque de produtos sempre que um novo item de pedido for inserido ou atualizado. O gatilho pode ser acionado após a inserção de um item de pedido, ajustando a quantidade do produto no estoque conforme a quantidade do item no pedido.
+
+1. **Função do Gatilho:** Primeiro, cria-se a função que será chamada pelo gatilho. Esta função irá atualizar a quantidade de produtos no estoque.
+
+```
+CREATE OR REPLACE FUNCTION atualizar_estoque_produto()
+RETURNS TRIGGER AS
+$$
+BEGIN
+    -- Atualiza a quantidade do produto no estoque, subtraindo a quantidade do item pedido
+    UPDATE produto
+    SET quantidade = quantidade - NEW.quantidade
+    WHERE id = NEW.id_produto;
+
+    -- Retorna a linha que foi inserida/atualizada no item_pedido
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+```
