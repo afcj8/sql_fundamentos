@@ -38,3 +38,50 @@ A implementação do sistema de gestão de pedidos foi projetada para uma loja d
 ```
 CREATE DATABASE sistema_pedidos;
 ```
+
+O script a seguir define a estrutura do banco de dados para o sistema de gestão de pedidos. Ele cria as tabelas principais e estabelece os relacionamentos entre elas, conforme especificado no modelo relacional. A definição inclui chaves primárias e estrangeiras, garantindo a integridade referencial e a consistência dos dados.
+
+```
+/* Criar tabela categoria */
+CREATE TABLE categoria (
+    id SERIAL PRIMARY KEY,
+    nome_categoria VARCHAR(50) NOT NULL
+);
+
+/* Criar tabela produto */
+CREATE TABLE produto (
+    id SERIAL PRIMARY KEY,
+    nome_produto VARCHAR(50) NOT NULL,
+    quantidade INTEGER NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    id_categoria INTEGER,
+    FOREIGN KEY (id_categoria) REFERENCES categoria(id)
+);
+
+/* Criar tabela cliente */
+CREATE TABLE cliente (
+    id SERIAL PRIMARY KEY,
+    nome_cliente VARCHAR(100) NOT NULL,
+    telefone VARCHAR(15) NOT NULL,
+    email VARCHAR(100) NOT NULL
+);
+
+/* Criar tabela pedido */
+CREATE TABLE pedido (
+    id SERIAL PRIMARY KEY,
+    data_pedido timestamptz NOT NULL,
+    id_cliente INTEGER,
+    FOREIGN KEY (id_cliente) REFERENCES cliente(id)
+);
+
+/* Criar tabela item_pedido */
+CREATE TABLE item_pedido (
+    id SERIAL PRIMARY KEY,
+    quantidade INTEGER NOT NULL,
+    preco DECIMAL NOT NULL,
+	id_pedido INTEGER,
+	id_produto INTEGER,
+    FOREIGN KEY (id_pedido) REFERENCES pedido(id),
+	FOREIGN KEY (id_produto) REFERENCES produto(id)
+);
+```
