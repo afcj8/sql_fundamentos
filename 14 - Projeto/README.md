@@ -33,4 +33,4 @@ Detalha os itens de um pedido. Cada item é identificado por um `id` e está ass
 
 ## 14.3. Implementação
 
-A implementação do sistema de gestão de pedidos foi projetada para uma loja de produtos eletrônicos.
+A implementação do sistema de gestão de pedidos foi projetada para uma loja de produtos eletrônicos. O banco de dados será desenvolvido utilizando PostgreSQL, um sistema de gerenciamento de banco de dados relacional robusto e amplamente utilizado. As tabelas foram definidas com base no modelo relacional apresentado.
