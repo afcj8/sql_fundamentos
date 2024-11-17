@@ -182,3 +182,16 @@ JOIN produto ON item_pedido.id_produto = produto.id
 WHERE cliente.id = 3
 ORDER BY pedido.data_pedido;
 ```
+
+2. **Consulta para calcular o faturamento total por produto:** Essa consulta agrupa os produtos vendidos e calcula o total arrecadado para cada produto, ordenando o resultado pelo faturamento em ordem decrescente.
+
+```
+SELECT 
+    produto.nome_produto,
+    SUM(item_pedido.quantidade) AS quantidade_total_vendida,
+    SUM(item_pedido.quantidade * item_pedido.preco) AS faturamento_total
+FROM item_pedido
+JOIN produto ON item_pedido.id_produto = produto.id
+GROUP BY produto.nome_produto
+ORDER BY faturamento_total DESC;
+```
