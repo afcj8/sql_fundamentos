@@ -86,4 +86,56 @@ CREATE TABLE item_pedido (
 );
 ```
 
-A população do banco de dados é uma etapa fundamental para testar e validar o sistema de gestão de pedidos. Com base nas tabelas criadas, os dados iniciais são inseridos para representar cenários reais de operação.
+A população do banco de dados é uma etapa fundamental para testar e validar o sistema de gestão de pedidos. Com base nas tabelas criadas, os dados iniciais são inseridos para representar cenários reais de operação. A seguir, são apresentados os comandos SQL para popular o banco com cinco registros em cada tabela, garantindo a consistência entre os relacionamentos estabelecidos.
+
+```
+-- Inserir dados na tabela categoria
+INSERT INTO categoria (nome_categoria) VALUES
+('Smartphones'),
+('Laptops'),
+('Acessórios'),
+('Monitores'),
+('Periféricos');
+
+-- Inserir dados na tabela produto
+INSERT INTO produto (nome_produto, quantidade, preco, id_categoria) VALUES
+('iPhone 14', 10, 4999.99, 1),
+('MacBook Pro', 5, 12999.99, 2),
+('Cabo HDMI', 50, 29.99, 3),
+('Monitor 4K', 8, 1999.99, 4),
+('Teclado Mecânico', 20, 349.99, 5);
+
+-- Inserir dados na tabela cliente
+INSERT INTO cliente (nome_cliente, telefone, email) VALUES
+('Ana Silva', '11987654321', 'ana.silva@email.com'),
+('Carlos Almeida', '21987654321', 'carlos.almeida@email.com'),
+('Beatriz Santos', '31987654321', 'beatriz.santos@email.com'),
+('José Oliveira', '41987654321', 'jose.oliveira@email.com'),
+('Mariana Costa', '51987654321', 'mariana.costa@email.com');
+
+-- Inserir dados na tabela pedido
+INSERT INTO pedido (data_pedido, id_cliente) VALUES
+('2024-11-01 10:30:00', 1),
+('2024-11-02 15:45:00', 2),
+('2024-11-03 11:20:00', 3),
+('2024-11-04 13:00:00', 4),
+('2024-11-05 14:30:00', 5),
+('2024-11-06 10:00:00', 1),
+('2024-11-07 16:15:00', 2),
+('2024-11-08 12:45:00', 3),
+('2024-11-09 14:00:00', 4),
+('2024-11-10 11:30:00', 5);
+
+-- Inserir dados na tabela item_pedido
+INSERT INTO item_pedido (quantidade, preco, id_pedido, id_produto) VALUES
+(1, 4999.99, 1, 1), -- Pedido 1, Produto: iPhone 14
+(1, 12999.99, 2, 2), -- Pedido 2, Produto: MacBook Pro
+(2, 29.99, 3, 3), -- Pedido 3, Produto: Cabo HDMI
+(1, 1999.99, 4, 4), -- Pedido 4, Produto: Monitor 4K
+(1, 349.99, 5, 5), -- Pedido 5, Produto: Teclado Mecânico
+(2, 4999.99, 6, 1), -- Pedido 6, Produto: iPhone 14
+(1, 29.99, 7, 3), -- Pedido 7, Produto: Cabo HDMI
+(3, 1999.99, 8, 4), -- Pedido 8, Produto: Monitor 4K
+(1, 349.99, 9, 5), -- Pedido 9, Produto: Teclado Mecânico
+(1, 12999.99, 10, 2); -- Pedido 10, Produto: MacBook Pro
+```
